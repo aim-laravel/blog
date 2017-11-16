@@ -6,11 +6,10 @@
         </div>
     </div>
     <hr class="m-t-0">
-    <div class="columns">
-        <div class="column">
-            <form action="{{ route('users.update', $user->id) }}" method="POST">
-                {{ csrf_field() }}
-                {{ method_field('PUT') }}
+    <form action="{{ route('users.update', $user->id) }}" method="POST">
+        <div class="columns">
+            <div class="column">
+                {{ csrf_field() }} {{ method_field('PUT') }}
                 <div class="field">
                     <label for="name" class="label">Name</label>
                     <p class="control">
@@ -27,7 +26,7 @@
 
                 <div class="field">
                     <label for="password" class="label">Password</label>
-                    <div >
+                    <div>
                         <div class="field">
                             <b-radio name="password_options" v-model="password_options" native-value="keep">Do Not Change Password</b-radio>
                         </div>
@@ -42,19 +41,34 @@
                         <input type="text" class="input" name="password" id="password" v-if="password_options == 'manual'" placeholder="Manually give a password">
                     </p>
                 </div>
-                <button class="button is-success">
+            </div>
+            <div class="column">
+                <label for="roles" class="label">Roles</label>
+                <input type="hidden" name="roles" :value="rolesSelected"> @foreach ($roles as $role)
+                <div class="field">
+                    <b-checkbox v-model="rolesSelected" native-value="{{ $role->id }}">
+                        {{ $role->display_name }} ({{ $role->description }})
+                    </b-checkbox>
+                </div>
+                @endforeach
+            </div>
+        </div>
+        <div class="columns">
+            <div class="column">
+                <button class="button is-success is-pulled-right">
                     Edit User
                 </button>
-            </form>
+            </div>
         </div>
-    </div>
+    </form>
 </div>
 @endsection @section('scripts')
 <script>
     var app = new Vue({
         el: '#app',
         data: {
-            password_options: 'keep'
+            password_options: 'keep',
+            rolesSelected: {!!$user->roles->pluck('id') !!}
         }
     })
 </script> @endsection

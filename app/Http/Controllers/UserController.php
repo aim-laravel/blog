@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Role;
 use App\User;
 use Session;
 
@@ -77,7 +78,7 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        $user = User::findOrFail($id);
+        $user = User::with('roles')->findOrFail($id);
         return view('manage.users.show')->withUser($user);
     }
 
@@ -89,8 +90,9 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        $user = User::findOrFail($id);
-        return view('manage.users.edit')->withUser($user);
+        $user = User::with('roles')->findOrFail($id);
+        $roles = Role::all();
+        return view('manage.users.edit')->withUser($user)->withRoles($roles);
     }
 
     /**
@@ -124,12 +126,16 @@ class UserController extends Controller
             $password = bcrypt($request->password);
         }
 
-        if ($user->save()) {
-            return redirect()->route('users.show', $id);
-        } else {
-            Session::flash('error', 'There was a problem saving the updated User Infor into the database. ');
-            return redirect()->route('users.edit');
-        }
+        $user->save();
+        $user->syncRoles(explode(',', $request->roles));
+        return redirect()->route('users.show', $id);
+
+        // if () {
+        //     return redirect()->route('users.show', $id);
+        // } else {
+        //     Session::flash('error', 'There was a problem saving the updated User Infor into the database. ');
+        //     return redirect()->route('users.edit');
+        // }
 
     }
 
