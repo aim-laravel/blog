@@ -12,9 +12,9 @@ import Buefy from 'buefy'
 
 Vue.use(Buefy);
 
-const app = new Vue({
-    el: '#app'
-});
+// const app = new Vue({
+//     el: '#app'
+// });
 
 
 $(document).ready(function () {

@@ -20,6 +20,7 @@ Auth::routes();
 Route::prefix('manage')->middleware('role:superadministrator|administrator|editor|author')->group(function () {
     Route::get('/dashboard', "ManageController@dashboard")->name('manage.dashboard');
     Route::redirect('/', '/manage/dashboard', 301);
+    Route::resource('/users', 'UserController');
 });
 
 Route::get('/home', 'HomeController@index')->name('home');
