@@ -49,10 +49,10 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="{{ route('manage.dashboard') }}">
                             <span class="icon">
                                 <i class="fa fa-fw fa-cog m-r-5"></i>
-                            </span>Settings
+                            </span>Manage
                         </a>
                     </li>
                     <li class="seperator"></li>
