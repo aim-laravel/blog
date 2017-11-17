@@ -1,17 +1,22 @@
 
 // Fonts
 // @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
-@import "~font-awesome/scss/font-awesome";
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
 // Variables
 @import "variables";
 
+// Font Awesome
+@import "node_modules/font-awesome/scss/font-awesome";
+
 // Bulma
-@import "~bulma/bulma";
-@import "~buefy/src/scss/buefy";
+@import "node_modules/bulma/bulma";
 
+// Bulma Vue Modules
+@import "node_modules/buefy/src/scss/buefy";
 
-// Extras
-@import "helpers";
+// Other SCSS Files
 @import "overrides";
-@import "styles";
+@import "helpers";
 @import "manage";
+@import "styles";

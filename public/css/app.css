@@ -1,4 +1,4 @@
-@charset "UTF-8";
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);@charset "UTF-8";
 
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
@@ -9290,7 +9290,7 @@ a.dropdown-item.is-active,
 
 .menu-list a:hover {
   background-color: whitesmoke;
-  color: #3097D1;
+  color: #363636;
 }
 
 .menu-list a.is-active {
@@ -16844,6 +16844,26 @@ label.panel-block:hover {
   background: rgba(255, 56, 96, 0.05);
 }
 
+/* ========================================
+   ============ Text Overrides ===========
+   ======================================== */
+
+.is-muted {
+  color: #b5b5b5 !important;
+}
+
+a.is-muted:hover {
+  color: #7a7a7a !important;
+}
+
+.nav-item img {
+  max-height: 2.8rem;
+}
+
+.nav {
+  height: 4.5rem;
+}
+
 .m-t-5 {
   margin-top: 5px;
 }
@@ -17324,116 +17344,14 @@ label.panel-block:hover {
   padding-right: 100px;
 }
 
-/* ========================================
-   =========== Text Override ==========
-   ======================================== */
-
-.is-muted {
-  color: #b5b5b5 !important;
-}
-
-a.is-muted:hover {
-  color: #7a7a7a !important;
-}
-
-/* ========================================
-   =========== Dropdown Override ==========
-   ======================================== */
-
-.dropdown {
-  position: relative;
-}
-
-.dropdown-menu {
-  -webkit-box-shadow: 0 0 8px #777;
-          box-shadow: 0 0 8px #777;
-  background: white;
-  display: none;
-  left: 0;
-  position: absolute;
-  top: 102%;
-  z-index: 1000;
-  padding: 10px 0 0px 0;
-  min-width: 200px;
-  -webkit-box-shadow: 0 0 1px rgba(57, 70, 78, 0.15), 0 20px 55px -8px rgba(57, 70, 78, 0.25);
-          box-shadow: 0 0 1px rgba(57, 70, 78, 0.15), 0 20px 55px -8px rgba(57, 70, 78, 0.25);
-  text-align: left;
-}
-
-.dropdown-menu li.seperator {
-  margin: 5px 0;
+.is-fullwidth {
   width: 100%;
-  border-top: 1px solid #ccc;
-}
-
-.dropdown-menu li > a {
-  display: block;
-  padding: 5px 0 5px 15px;
-  margin: 5px 0;
-}
-
-.dropdown-menu li > a:hover {
-  background-color: whitesmoke;
-}
-
-.dropdown.is-open .dropdown-menu {
-  display: block;
-}
-
-.dropdown.is-aligned-right .dropdown-menu {
-  left: auto;
-  right: 0;
-}
-
-/* ========================================
-   =========== Nav Item Override ==========
-   ======================================== */
-
-button.navbar-item {
-  background-color: transparent;
-  border: none;
-  color: #7a7a7a;
-}
-
-button.navbar-item:hover {
-  color: #363636;
-}
-
-button.navbar-item.is-active {
-  color: #363636;
-}
-
-button.navbar-item.is-tab {
-  border-bottom: 1px solid transparent;
-  border-top: 1px solid transparent;
-  padding-bottom: calc(0.75rem - 1px);
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: calc(0.75rem - 1px);
-}
-
-button.navbar-item:hover {
-  border-bottom-color: #00d1b2;
-  border-top-color: transparent;
-}
-
-button.navbar-item.is-active {
-  border-bottom: 3px solid #00d1b2;
-  color: #00d1b2;
-  padding-bottom: calc(0.75rem - 3px);
-}
-
-.navbar-item img {
-  max-height: 2.8rem;
-}
-
-.navbar {
-  height: 4.5rem;
 }
 
 .side-menu {
-  position: fixed;
-  height: 100vh;
+  position: absolute;
+  top: 4rem;
+  bottom: 0;
   width: 200px;
   background-color: white;
   overflow-y: scroll;
