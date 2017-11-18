@@ -17,13 +17,41 @@
                 <a href="{{route('users.index')}}">Manage Users</a>
             </li>
             <li>
-                <a href="{{route('permissions.index')}}">Roles &amp; Permissions</a>
-                <ul>
+                <a class="has-submenu">Roles &amp; Permissions</a>
+                <ul class="submenu">
                     <li>
                         <a href="{{route('roles.index')}}">Roles</a>
                     </li>
                     <li>
                         <a href="{{route('permissions.index')}}">Permissions</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a class="has-submenu">Example Accordion</a>
+                <ul class="submenu">
+                    <li>
+                        <a href="#">EG 1</a>
+                    </li>
+                    <li>
+                        <a href="#">EG 1</a>
+                    </li>
+                    <li>
+                        <a href="#">EG 1</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a class="has-submenu">Example Accordion</a>
+                <ul class="submenu">
+                    <li>
+                        <a href="#">EG 1</a>
+                    </li>
+                    <li>
+                        <a href="#">EG 1</a>
+                    </li>
+                    <li>
+                        <a href="#">EG 1</a>
                     </li>
                 </ul>
             </li>

@@ -1022,7 +1022,7 @@ module.exports = Cancel;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(11);
-module.exports = __webpack_require__(37);
+module.exports = __webpack_require__(38);
 
 
 /***/ }),
@@ -1047,6 +1047,8 @@ Vue.use(__WEBPACK_IMPORTED_MODULE_0_buefy___default.a);
 //   el: '#app',
 //   data: {}
 // });
+
+__webpack_require__(37);
 
 /***/ }),
 /* 12 */
@@ -29940,6 +29942,31 @@ module.exports = Vue$3;
 
 /***/ }),
 /* 37 */
+/***/ (function(module, exports) {
+
+var accordions = document.getElementsByClassName('has-submenu');
+
+for (var index = 0; index < accordions.length; index++) {
+    accordions[index].onclick = function () {
+        this.classList.toggle('is-active');
+
+        var submenu = this.nextElementSibling;
+        if (submenu.style.maxHeight) {
+            // close submenu
+            submenu.style.maxHeight = null;
+            submenu.style.marginTop = null;
+            submenu.style.marginBottom = null;
+        } else {
+            // open submenu
+            submenu.style.maxHeight = submenu.scrollHeight + "px";
+            submenu.style.marginTop = "0.75em";
+            submenu.style.marginBottom = "0.75em";
+        }
+    };
+}
+
+/***/ }),
+/* 38 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
