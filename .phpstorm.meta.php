@@ -3,7 +3,7 @@ namespace PHPSTORM_META {
 
    /**
     * PhpStorm Meta file, to provide autocomplete information for PhpStorm
-    * Generated on 2017-11-18.
+    * Generated on 2017-11-21.
     *
     * @author Barry vd. Heuvel <barryvdh@gmail.com>
     * @see https://github.com/barryvdh/laravel-ide-helper
@@ -49,6 +49,7 @@ namespace PHPSTORM_META {
         'command.laratrust.setup-teams' => \Laratrust\Commands\SetupTeamsCommand::class,
         'command.laratrust.seeder' => \Laratrust\Commands\MakeSeederCommand::class,
         'command.laratrust.upgrade' => \Laratrust\Commands\UpgradeCommand::class,
+        'easynav' => \DevMarketer\EasyNav\EasyNav::class,
         'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
         'Illuminate\Console\Scheduling\Schedule' => \Illuminate\Console\Scheduling\Schedule::class,
         'cache' => \Illuminate\Cache\CacheManager::class,
@@ -188,6 +189,7 @@ namespace PHPSTORM_META {
         'command.laratrust.setup-teams' => \Laratrust\Commands\SetupTeamsCommand::class,
         'command.laratrust.seeder' => \Laratrust\Commands\MakeSeederCommand::class,
         'command.laratrust.upgrade' => \Laratrust\Commands\UpgradeCommand::class,
+        'easynav' => \DevMarketer\EasyNav\EasyNav::class,
         'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
         'Illuminate\Console\Scheduling\Schedule' => \Illuminate\Console\Scheduling\Schedule::class,
         'cache' => \Illuminate\Cache\CacheManager::class,
@@ -327,6 +329,7 @@ namespace PHPSTORM_META {
         'command.laratrust.setup-teams' => \Laratrust\Commands\SetupTeamsCommand::class,
         'command.laratrust.seeder' => \Laratrust\Commands\MakeSeederCommand::class,
         'command.laratrust.upgrade' => \Laratrust\Commands\UpgradeCommand::class,
+        'easynav' => \DevMarketer\EasyNav\EasyNav::class,
         'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
         'Illuminate\Console\Scheduling\Schedule' => \Illuminate\Console\Scheduling\Schedule::class,
         'cache' => \Illuminate\Cache\CacheManager::class,
@@ -466,6 +469,7 @@ namespace PHPSTORM_META {
         'command.laratrust.setup-teams' => \Laratrust\Commands\SetupTeamsCommand::class,
         'command.laratrust.seeder' => \Laratrust\Commands\MakeSeederCommand::class,
         'command.laratrust.upgrade' => \Laratrust\Commands\UpgradeCommand::class,
+        'easynav' => \DevMarketer\EasyNav\EasyNav::class,
         'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
         'Illuminate\Console\Scheduling\Schedule' => \Illuminate\Console\Scheduling\Schedule::class,
         'cache' => \Illuminate\Cache\CacheManager::class,
@@ -605,6 +609,7 @@ namespace PHPSTORM_META {
         'command.laratrust.setup-teams' => \Laratrust\Commands\SetupTeamsCommand::class,
         'command.laratrust.seeder' => \Laratrust\Commands\MakeSeederCommand::class,
         'command.laratrust.upgrade' => \Laratrust\Commands\UpgradeCommand::class,
+        'easynav' => \DevMarketer\EasyNav\EasyNav::class,
         'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
         'Illuminate\Console\Scheduling\Schedule' => \Illuminate\Console\Scheduling\Schedule::class,
         'cache' => \Illuminate\Cache\CacheManager::class,
@@ -744,6 +749,7 @@ namespace PHPSTORM_META {
         'command.laratrust.setup-teams' => \Laratrust\Commands\SetupTeamsCommand::class,
         'command.laratrust.seeder' => \Laratrust\Commands\MakeSeederCommand::class,
         'command.laratrust.upgrade' => \Laratrust\Commands\UpgradeCommand::class,
+        'easynav' => \DevMarketer\EasyNav\EasyNav::class,
         'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
         'Illuminate\Console\Scheduling\Schedule' => \Illuminate\Console\Scheduling\Schedule::class,
         'cache' => \Illuminate\Cache\CacheManager::class,
@@ -883,6 +889,7 @@ namespace PHPSTORM_META {
         'command.laratrust.setup-teams' => \Laratrust\Commands\SetupTeamsCommand::class,
         'command.laratrust.seeder' => \Laratrust\Commands\MakeSeederCommand::class,
         'command.laratrust.upgrade' => \Laratrust\Commands\UpgradeCommand::class,
+        'easynav' => \DevMarketer\EasyNav\EasyNav::class,
         'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
         'Illuminate\Console\Scheduling\Schedule' => \Illuminate\Console\Scheduling\Schedule::class,
         'cache' => \Illuminate\Cache\CacheManager::class,

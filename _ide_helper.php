@@ -1,7 +1,7 @@
 <?php
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 5.5.21 on 2017-11-18.
+ * Generated for Laravel 5.5.21 on 2017-11-21.
  *
  * @author Barry vd. Heuvel <barryvdh@gmail.com>
  * @see https://github.com/barryvdh/laravel-ide-helper
@@ -12297,6 +12297,101 @@ namespace Laratrust {
  
 }
 
+namespace DevMarketer\EasyNav { 
+
+    class EasyNavFacade {
+        
+        /**
+         * returns the active class if the defined segment exists
+         *  in the current request URI
+         *
+         * @param string|array $slugs
+         * @param int|array $segments
+         * @param string|NULL $active
+         * @return string 
+         * @static 
+         */ 
+        public static function hasSegment($slugs, $segments = 1, $active = null)
+        {
+            return \DevMarketer\EasyNav\EasyNav::hasSegment($slugs, $segments, $active);
+        }
+        
+        /**
+         * Alias to $this->hasSegment()
+         *
+         * @param string|array $slugs
+         * @param int|array $segments
+         * @param string|NULL $active
+         * @return string 
+         * @static 
+         */ 
+        public static function isSegment($slugs, $segments = 1, $active = null)
+        {
+            return \DevMarketer\EasyNav\EasyNav::isSegment($slugs, $segments, $active);
+        }
+        
+        /**
+         * Receives a named route and returns true or false depending
+         *  if the current URL is equal to the named route provided.
+         *
+         * @param string $route
+         * @param string|NULL $active
+         * @return string 
+         * @static 
+         */ 
+        public static function isRoute($route, $active = null)
+        {
+            return \DevMarketer\EasyNav\EasyNav::isRoute($route, $active);
+        }
+        
+        /**
+         * Checks if current page is one of a specified resouce
+         *  provided in the function. Also accepts a prefix or strict
+         *  mode to optionally prevent false-positives
+         *
+         * @param string $resource
+         * @param string|NULL $prefix
+         * @param string $active
+         * @param bool $strict
+         * @return string 
+         * @static 
+         */ 
+        public static function isResource($resource, $prefix = null, $active = null, $strict = false)
+        {
+            return \DevMarketer\EasyNav\EasyNav::isResource($resource, $prefix, $active, $strict);
+        }
+        
+        /**
+         * This is basically an exposed (public) alias to $this->pathContains()
+         *  which checks a string inside the path
+         *
+         * @param string $route
+         * @param string|NULL $active
+         * @return string 
+         * @static 
+         */ 
+        public static function urlDoesContain($search, $active = null, $strict = false)
+        {
+            return \DevMarketer\EasyNav\EasyNav::urlDoesContain($search, $active, $strict);
+        }
+        
+        /**
+         * Alias for $this->urlDoesContain() because URL is often spelled URI by mistake
+         *
+         * @param string $route
+         * @param string|NULL $active
+         * @return string 
+         * @static 
+         */ 
+        public static function uriDoesContain($search, $active = null, $strict = false)
+        {
+            return \DevMarketer\EasyNav\EasyNav::uriDoesContain($search, $active, $strict);
+        }
+         
+    }
+ 
+}
+
 
 namespace  { 
 
@@ -14411,6 +14506,8 @@ namespace  {
     class View extends \Illuminate\Support\Facades\View {}
 
     class Laratrust extends \Laratrust\LaratrustFacade {}
+
+    class Nav extends \DevMarketer\EasyNav\EasyNavFacade {}
  
 }
 
