@@ -3,17 +3,21 @@
    ======================================== */
 
 .is-muted {
-  color: $grey-light !important;
+    color: $grey-light !important;
 }
 
-a.is-muted:hover{
-  color: $grey !important;
+a.is-muted:hover {
+    color: $grey !important;
 }
 
 .nav-item img {
-  max-height: 2.8rem;
+    max-height: 2.8rem;
 }
 
 .nav {
-  height: 4.5rem;
+    height: 4.5rem;
+}
+
+.navbar-burger {
+    border: none;
 }
